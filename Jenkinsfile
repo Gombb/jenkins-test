@@ -6,7 +6,7 @@ node {
     }
 
     stage("clear containers") {
-        sh "docker rm -f $(docker ps -a -q)"
+        sh "docker rm -f ${docker ps -a -q}"
     }
 
     stage("Build with docker") {
